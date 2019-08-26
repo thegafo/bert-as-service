@@ -1,0 +1,32 @@
+{
+  "name": "bert-as-service",
+  "version": "1.0.0",
+  "description": "bert-as-service client for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gafotech/bert-as-service.git"
+  },
+  "keywords": [
+    "BERT",
+    "bert-as-service",
+    "NLP",
+    "word",
+    "vectors",
+    "word",
+    "embeddings",
+    "vectorize"
+  ],
+  "author": "gafotech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gafotech/bert-as-service/issues"
+  },
+  "homepage": "https://github.com/gafotech/bert-as-service#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
