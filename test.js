@@ -1,7 +1,7 @@
 
 const Bert = require('.');
-const bert = new Bert('http://localhost:8125');
 
-bert.vectorize(['Hello world']).then(embeddings => {
-  console.log(embeddings[0]);
-});
+(async () => {
+  const bert = new Bert('http://35.196.197.215:8125');
+  console.log(await bert.vectorize(['Hello world']));
+})();

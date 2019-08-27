@@ -1,6 +1,6 @@
 {
   "name": "bert-as-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bert-as-service client for NodeJS",
   "main": "index.js",
   "scripts": {

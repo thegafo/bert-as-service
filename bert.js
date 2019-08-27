@@ -15,6 +15,7 @@ class Bert {
    */
   vectorize (texts) {
     return new Promise((resolve,reject) => {
+      texts = texts.filter(t => !!t);
       var options = {
         method: 'POST',
         uri: `${this.uri}/encode`,
@@ -29,8 +30,9 @@ class Bert {
       }
       request(options, (err,res,body) => {
         if (err) return reject(err);
-        var { id, result, status} = body;
-        resolve(result);
+        var { id, result, status, description} = body;
+        if (status == 200) return resolve(result);
+        else return reject(new Error(description));
       });
     });
   }
@@ -43,7 +45,8 @@ class Bert {
    */
   async vectorizeOne(text) {
     var vectors = await this.vectorize([text]);
-    return vectors[0];
+    if (vectors && vectors.length) return vectors[0];
+    return [];
   }
 
 }
